@@ -30,4 +30,7 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
+  externals: {
+    react: "react",
+  },
 };
