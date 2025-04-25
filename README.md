@@ -33,12 +33,6 @@ export const App = () => {
     // ...`@tanstack/react-query` options
   });
 
-  useEffect(() => {
-    handleData(async () => {
-      return "Hello World";
-    });
-  }, [handleData]);
-
   return render(
     () => <p>Idle</p>,                             // → renderIdle
     () => <p>Loading..</p>,                        // → renderLoading
