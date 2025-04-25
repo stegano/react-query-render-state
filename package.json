@@ -1,0 +1,63 @@
+{
+  "name": "react-query-render-state",
+  "version": "1.0.0",
+  "description": "React Query Render State: This hook allows you to declaratively define components that will be rendered based on the data processing state.",
+  "main": "bin/index.js",
+  "types": "bin/index.d.ts",
+  "scripts": {
+    "eslint": "eslint '{src,pages}/**/*.{ts,tsx}'",
+    "eslint:fix": "eslint '{src,pages}/**/*.{ts,tsx}' --fix",
+    "build": "rm -rf ./bin && webpack --config ./webpack.config.js",
+    "deploy": "npm run test && npm run build && npm publish --access=public",
+    "test": "jest",
+    "ts-check": "tsc --noEmit"
+  },
+  "author": "Yongwoo Jung<allen.jung.0110@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/stegano/react-query-render-state#readme",
+  "bugs": {
+    "url": "https://github.com/stegano/react-query-render-state/issues"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "render",
+    "state",
+    "react-query",
+    "tanstack/react-query",
+    "react-render-state"
+  ],
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^29.5.14",
+    "@types/react": "^19.1.2",
+    "@types/react-test-renderer": "^19.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "eslint": "^8.48.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-next": "^13.4.19",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-storybook": "^0.6.13",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.5.3",
+    "react-hooks": "^1.0.1",
+    "ts-jest": "^29.3.2",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.74.4",
+    "react": "^19.1.0",
+    "react-render-state": "^2.1.1"
+  }
+}
