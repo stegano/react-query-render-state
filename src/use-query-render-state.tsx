@@ -26,42 +26,34 @@ export const useConvertQueryRenderStateResult = <
    * handle the `react-query` status
    */
   useEffect(() => {
-    switch (reactQueryResult.status) {
-      case "pending": {
-        manipulation((prev) => ({
-          previousData: prev.currentData,
-          previousError: prev.currentError,
-          currentData: undefined,
-          currentError: undefined,
-          status: IRenderState.Status.Loading,
-        }));
-        break;
-      }
-      case "success": {
-        manipulation((prev) => ({
-          previousData: prev.currentData,
-          previousError: prev.currentError,
-          currentData: reactQueryResult.data,
-          currentError: undefined,
-          status: IRenderState.Status.Success,
-        }));
-        break;
-      }
-      case "error": {
-        manipulation((prev) => ({
-          previousData: prev.currentData,
-          previousError: prev.currentError,
-          currentData: undefined,
-          currentError: reactQueryResult.error,
-          status: IRenderState.Status.Error,
-        }));
-        break;
-      }
-      default: {
-        break;
-      }
+    const { isFetching, isRefetching, isSuccess, isError } = reactQueryResult;
+    const isPending = isFetching || isRefetching;
+    if (isPending) {
+      manipulation((prev) => ({
+        previousData: prev.currentData,
+        previousError: prev.currentError,
+        currentData: undefined,
+        currentError: undefined,
+        status: IRenderState.Status.Loading,
+      }));
+    } else if (isSuccess) {
+      manipulation((prev) => ({
+        previousData: prev.currentData,
+        previousError: prev.currentError,
+        currentData: reactQueryResult.data,
+        currentError: undefined,
+        status: IRenderState.Status.Success,
+      }));
+    } else if (isError) {
+      manipulation((prev) => ({
+        previousData: prev.currentData,
+        previousError: prev.currentError,
+        currentData: undefined,
+        currentError: reactQueryResult.error,
+        status: IRenderState.Status.Error,
+      }));
     }
-  }, [manipulation, reactQueryResult.data, reactQueryResult.error, reactQueryResult.status]);
+  }, [manipulation, reactQueryResult]);
 
   return {
     render,
