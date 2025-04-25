@@ -34,5 +34,6 @@ module.exports = {
     react: "react",
     "react-dom": "react-dom",
     "@tanstack/react-query": "@tanstack/react-query",
+    "react-render-state": "react-render-state",
   },
 };

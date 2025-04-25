@@ -1,6 +1,5 @@
 import { useInfiniteQuery, UseInfiniteQueryResult, useQuery, UseQueryResult } from "@tanstack/react-query";
 import { useRenderState, IRenderState } from "react-render-state";
-export { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 /**
  * useConvertQueryRenderStateResult
  * Convert the ReactQuery result to ReactRenderState result.
