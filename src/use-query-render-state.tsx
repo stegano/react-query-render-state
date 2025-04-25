@@ -7,6 +7,8 @@ import {
 import { useEffect } from "react";
 import { useRenderState, IRenderState } from "react-render-state";
 
+export { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 /**
  * useConvertQueryRenderStateResult
  * Convert the ReactQuery result to ReactRenderState result.
