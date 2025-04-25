@@ -10,9 +10,9 @@ export declare const useConvertQueryRenderStateResult: <QueryData, QueryError ex
 /**
  * useQueryRenderState
  */
-export declare const useQueryRenderState: <QueryFnData, QueryError extends Error, QueryData>(...args: Parameters<typeof useQuery<QueryFnData, QueryError, QueryData>>) => {
-    render: IRenderState.Render<unknown, Error>;
-} & UseQueryResult<QueryData, QueryError>;
+export declare const useQueryRenderState: <QueryFnData, QueryError extends Error, QueryData>(...args: Parameters<typeof useQuery<QueryFnData, QueryError, QueryData>>) => ReturnType<typeof useQuery<QueryFnData, QueryError, QueryData>> & {
+    render: ReturnType<typeof useRenderState<QueryData, QueryError>>[0];
+};
 /**
  * useInfiniteQueryRenderState
  */
