@@ -1,1 +1,1 @@
-export { useQueryRenderState, useInfiniteQueryRenderState, useConvertQueryRenderStateResult, } from "./use-query-render-state";
+export { useQueryRenderState, useInfiniteQueryRenderState, useConvertQueryRenderStateResult, QueryClient, QueryClientProvider, } from "./use-query-render-state";
