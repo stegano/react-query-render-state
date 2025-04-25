@@ -1,8 +1,9 @@
 {
   "name": "react-query-render-state",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "description": "React Query Render State: This hook allows you to declaratively define components that will be rendered based on the data processing state.",
   "main": "bin/index.js",
+  "module": "bin/index.esm.js",
   "types": "bin/index.d.ts",
   "scripts": {
     "eslint": "eslint '{src,pages}/**/*.{ts,tsx}'",
