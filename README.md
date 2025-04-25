@@ -25,7 +25,6 @@ git clone https://github.com/stegano/react-query-render-state.git
 The `useQueryRenderState` hook enables a declarative approach to display components based on data processing status.
 
 ```tsx
-import { useCallback, useEffect } from "react";
 import { useQueryRenderState } from "react-query-render-state";
 
 export const App = () => {
