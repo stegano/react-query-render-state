@@ -33,6 +33,5 @@ module.exports = {
   externals: {
     react: "react",
     "react-dom": "react-dom",
-    "@tanstack/react-query": "@tanstack/react-query",
   },
 };

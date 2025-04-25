@@ -22,6 +22,6 @@
   "skipCi": true,
   "repoType": "github",
   "repoHost": "https://github.com",
-  "projectName": "react-render-state",
+  "projectName": "react-query-render-state",
   "projectOwner": "stegano"
 }
