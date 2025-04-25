@@ -41,8 +41,9 @@ export const App = () => {
   );
 };
 ```
+Demo: https://stackblitz.com/edit/stackblitz-starters-ccrgxa9c
 
-Note: ✨ `react-query-render-state` is based on `@tanstack/react-query` and `react-render-state`
+Note: ✨ `react-query-render-state` is made based on `@tanstack/react-query` and `react-render-state`
 
 ## Contributors ✨
 
