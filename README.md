@@ -29,8 +29,9 @@ import { useCallback, useEffect } from "react";
 import { useQueryRenderState } from "react-query-render-state";
 
 export const App = () => {
-  const { render, ...reactQueryResult } = useQueryRenderState({
-    // ...`@tanstack/react-query` options
+  const { render, ...queryResult } = useQueryRenderState({
+    // ...`useQuery` options
+    // You can also use `useInfiniteQueryRenderState` in the same way.
   });
 
   return render(
