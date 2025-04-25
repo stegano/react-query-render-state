@@ -74,7 +74,9 @@ export const useConvertQueryRenderStateResult = <
  */
 export const useQueryRenderState = <QueryFnData, QueryError extends Error, QueryData>(
   ...args: Parameters<typeof useQuery<QueryFnData, QueryError, QueryData>>
-) => {
+): ReturnType<typeof useQuery<QueryFnData, QueryError, QueryData>> & {
+  render: ReturnType<typeof useRenderState<QueryData, QueryError>>[0];
+} => {
   const queryResult = useQuery<QueryFnData, QueryError, QueryData>(...args);
   return useConvertQueryRenderStateResult(queryResult);
 };
