@@ -1,6 +1,6 @@
 {
   "name": "react-query-render-state",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React Query Render State: This hook allows you to declaratively define components that will be rendered based on the data processing state.",
   "main": "bin/index.js",
   "types": "bin/index.d.ts",
@@ -55,7 +55,7 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@tanstack/react-query": "^5.74.4",
     "react": "^19.1.0",
     "react-render-state": "^2.1.1"
