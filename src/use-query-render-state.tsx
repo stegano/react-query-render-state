@@ -1,9 +1,4 @@
-import {
-  useInfiniteQuery,
-  UseInfiniteQueryResult,
-  useQuery,
-  UseQueryResult,
-} from "@tanstack/react-query";
+import { QueryObserverBaseResult, useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { useRenderState, IRenderState } from "react-render-state";
 
@@ -14,9 +9,7 @@ import { useRenderState, IRenderState } from "react-render-state";
 export const useConvertQueryRenderStateResult = <
   QueryData,
   QueryError extends Error,
-  QueryResult extends
-    | UseQueryResult<QueryData, QueryError>
-    | UseInfiniteQueryResult<QueryData, QueryError>,
+  QueryResult extends QueryObserverBaseResult<QueryData, QueryError>,
 >(
   reactQueryResult: QueryResult,
 ) => {
@@ -49,7 +42,7 @@ export const useConvertQueryRenderStateResult = <
         previousData: prev.currentData,
         previousError: prev.currentError,
         currentData: undefined,
-        currentError: reactQueryResult.error,
+        currentError: reactQueryResult.error ?? undefined,
         status: IRenderState.Status.Error,
       }));
     }
