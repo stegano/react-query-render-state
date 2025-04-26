@@ -1,10 +1,10 @@
-import { useInfiniteQuery, UseInfiniteQueryResult, useQuery, UseQueryResult } from "@tanstack/react-query";
+import { QueryObserverBaseResult, useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { useRenderState, IRenderState } from "react-render-state";
 /**
  * useConvertQueryRenderStateResult
  * Convert the ReactQuery result to ReactRenderState result.
  */
-export declare const useConvertQueryRenderStateResult: <QueryData, QueryError extends Error, QueryResult extends UseQueryResult<QueryData, QueryError> | UseInfiniteQueryResult<QueryData, QueryError>>(reactQueryResult: QueryResult) => {
+export declare const useConvertQueryRenderStateResult: <QueryData, QueryError extends Error, QueryResult extends QueryObserverBaseResult<QueryData, QueryError>>(reactQueryResult: QueryResult) => {
     render: IRenderState.Render<QueryData, QueryError>;
 } & QueryResult;
 /**
